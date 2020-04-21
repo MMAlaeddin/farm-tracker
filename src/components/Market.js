@@ -18,7 +18,4 @@ Market.propTypes = {
   booth: PropTypes.string,
   hours: PropTypes.string
 };
-
-
-
 export default Market; 
