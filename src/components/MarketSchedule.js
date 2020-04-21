@@ -1,6 +1,6 @@
 import React from "react";
 import Market from "./Market";
-import { getByDisplayValue } from "@testing-library/react";
+// import { getByDisplayValue } from "@testing-library/react";
 
 const masterMarketSchedule = [  
   {  
@@ -40,22 +40,38 @@ const masterMarketSchedule = [
      booth: "9G"
   }
  ]
+//  let now = new Date();
+//  let today = day[now.getDay()];
  
- function marketSchedule(){
+ 
+//  console.log(today);
+let scheduleView = {
+  textAlign: 'center',
+  height: "100%"
+}
+ 
+ function MarketSchedule(market){
    return (
      <React.Fragment>
-     {
-       masterMarketSchedule.map((schedule, index) => <Market day = {schedule.day}
-       hours = {schedule.hours}
-       key={index}/>
+       <div style= {scheduleView}>
+     {masterMarketSchedule.map((market) => 
+     <Market day = {market.day}
+       location = {market.location}
+       hours = {market.hours}
+      //  key={index}
+       />
        )}
+       </div>
        </React.Fragment>
+      
+
        
       //  for(let i = 0; i < masterMarketSchedule.length; i++) {
-      //    var displayDay = (masterMarketSchedule.day.getDay(i));
-
+      //    var displayDay = (masterMarketSchedule.day.getDay([i]));
+      //     if(masterMarketSchedule.day[i] === getDay([i]));
       //     return displayDay; 
     
-   );
+       );
+     }
 
- export default marketSchedule; 
+ export default MarketSchedule; 
