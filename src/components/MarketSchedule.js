@@ -42,6 +42,10 @@ const masterMarketSchedule = [
  ]
 //  let now = new Date();
 //  let today = day[now.getDay()];
+//  for(let i = 0; i < masterMarketSchedule.length; i ++)
+//  if (masterMarketSchedule.day === today[i]) {
+//  }
+
  
  
 //  console.log(today);
@@ -50,15 +54,15 @@ let scheduleView = {
   height: "100%"
 }
  
- function MarketSchedule(market){
+ function MarketSchedule(){
    return (
      <React.Fragment>
        <div style= {scheduleView}>
-     {masterMarketSchedule.map((market) => 
+     {masterMarketSchedule.map((market, index) => 
      <Market day = {market.day}
        location = {market.location}
        hours = {market.hours}
-      //  key={index}
+       key={index}
        />
        )}
        </div>
